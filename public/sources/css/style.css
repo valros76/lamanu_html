@@ -221,6 +221,11 @@ html{
    flex-wrap:wrap;
    text-align:center;
    font-family:monospace;
+   mix-blend-mode: multiply;
+   background:linear-gradient(28deg,#2087a7, #408d8d, #4fa1a1, #252525, #000);
+   -webkit-background-clip:text;
+   background-clip:text;
+   color:transparent;
 }
 
 .articles-container{
@@ -238,6 +243,11 @@ html{
    max-height:25vh;
    object-fit:cover;
    object-position:center;
+}
+
+.articles-container p{
+   padding:0 2em 1em 2em;
+   font-size:1.1em;
 }
 
 .main-footer{
