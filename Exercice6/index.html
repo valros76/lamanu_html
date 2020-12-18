@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 6</title>
+    <link rel="icon" type="image/png" href="../public/assets/images/W32x32_light.png" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <fieldset>
+          <legend>Votre identité</legend>
+          <form action="" method="POST">
+            <ol>
+              <li>
+                <label for="nom">Nom : </label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  placeholder="Nom"
+                  required
+                />
+              </li>
+              <li>
+                <label for="prenom">Prénom : </label>
+                <input
+                  type="text"
+                  id="prenom"
+                  name="prenom"
+                  placeholder="Prénom"
+                  required
+                />
+              </li>
+              <li>
+                <label for="mail">Adresse mail : </label>
+                <input
+                  type="email"
+                  id="mail"
+                  name="mail"
+                  placeholder="Adresse mail"
+                  pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/"
+                  required
+                />
+              </li>
+            </ol>
+          </form>
+        </fieldset>
+        <fieldset>
+          <legend>Adresse de livraison</legend>
+          <ol>
+            <li>
+              <label for="adresse">Adresse : </label>
+              <textarea
+                name="adresse"
+                id="adresse"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </li>
+            <li>
+              <label for="cp">Code postal : </label>
+              <input type="text" maxlength="5" name="cp" id="cp"  pattern="[0-9]{5}" placeholder="Code postal" required />
+            </li>
+            <li>
+              <label for="ville">Ville : </label>
+              <input
+                type="text"
+                name="ville"
+                id="ville"
+                placeholder="Ville"
+                required
+              />
+            </li>
+          </ol>
+        </fieldset>
+        <fieldset>
+          <legend>Type de règlement</legend>
+          <ol>
+            <li>
+              <label>Type de carte bancaire : </label>
+              <ul>
+                <li>
+                  <input type="radio" name="visa" id="visa" />
+                  <label for="visa">VISA</label>
+                </li>
+                <li>
+                  <input type="radio" name="mastercard" id="mastercard" />
+                  <label for="mastercard">Mastercard</label>
+                </li>
+              </ul>
+            </li>
+            <li>
+               <label for="cb_number">Numéro de carte : </label>
+               <input type="text" maxlength="16"  pattern="[0-9]{16}" name="cb_number" id="cb_number" placeholder="Numéro de carte" required>
+            </li>
+            <li>
+               <label for="ccv">Code de sécurité : </label>
+               <input type="text" maxlength="3" name="ccv" id="ccv" pattern="[0-9]{3}" placeholder="Code de sécurité" required>
+            </li>
+            <li>
+               <label for="cb_name">Nom du titulaire : </label>
+               <input type="text" name="cb_name" id="cb_name" placeholder="Nom du titulaire" required>
+            </li>
+          </ol>
+        </fieldset>
+        <button>J'achète !</button>
+      </section>
+    </main>
+  </body>
+</html>
