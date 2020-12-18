@@ -129,18 +129,23 @@ body{
 .main-content{
    width:100%;
    display:grid;
+   grid-template-areas: 
+      "aside section";
    grid-template-columns:repeat(3,1fr);
    gap:0.2em;
-   grid-auto-rows:auto;
+   grid-auto-rows:minmax(15vh, auto);
+   grid-auto-flow:row-dense;
+   padding:1em 0;
 }
 
 .left-aside{
    width:100%;
    display:flex;
    flex-direction:column;
-   justify-content:center;
+   justify-content:flex-start;
    align-items:center;
    grid-column:1;
+   border-right:1px solid #000;
 }
 
 .main-sections{
@@ -155,12 +160,20 @@ body{
 
 .main-footer{
    width:100%;
-   position:fixed;
-   bottom:0;
+   display:flex;
+   flex-direction:column;
    justify-content:center;
    align-items:center;
    text-align:center;
    box-shadow:0px -1px 3.5px -1px #22678f;
+   padding:0.5em 0.15em;
+}
+.main-footer p{
+   width: calc(100% - 8px);
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   text-align:center;
 }
 
 @media all and (max-width:960px){
