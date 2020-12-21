@@ -25,7 +25,7 @@
                         </li>
                         <li>
                             <label for="mail">Adresse mail : </label>
-                            <input type="email" id="mail" name="mail" placeholder="Adresse mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" required />
+                            <input type="email" id="mail" name="mail" placeholder="Adresse mail" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/" required />
                         </li>
                     </ol>
                 </fieldset>
@@ -76,7 +76,7 @@
                         </li>
                     </ol>
                 </fieldset>
-                <input type="submit" value="J'achète !" />
+                <button type="submit">J'achète !</button>
             </form>
         </section>
     </main>
